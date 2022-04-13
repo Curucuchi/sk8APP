@@ -13,6 +13,8 @@ func parkortrick(s string) {
 
 	} else if strings.ToLower(s) == "park" {
 		dbb.GetParks()
+	} else if strings.ToLower(s) == "weather" {
+		weather.Main()
 	} else {
 		fmt.Println("\nYo dude, looks like your typing needs some work, make sure you type the specified options correctly.")
 	}
@@ -21,8 +23,7 @@ func parkortrick(s string) {
 func main() {
 	choice := ""
 
-	weather.Main()
-	fmt.Println("\nWelcome to your Sk8 journal, Want me to recommend you a trick or a park? (Trick or Park):")
+	fmt.Println("\nWelcome to your Sk8 journal, Want me to recommend you a trick a park or tell you the weather? (Trick, Park, Weather):")
 	fmt.Scanf("%s", &choice)
 	fmt.Println("\n")
 	parkortrick(choice)
