@@ -8,6 +8,13 @@ import (
 )
 
 func main() {
+	answer := ""
+	fmt.Println("Do you wanna signup, login, or delete your account? (s, l, d)")
+	fmt.Scanf("%s", &answer)
+	begin(answer)
+
+	//Figure out how to stop code from moving on if login, delete, or signup fails
+
 	choice := ""
 
 	fmt.Println("\nWelcome to your Sk8 journal, Want me to recommend you a trick a park or tell you the weather? (Trick, Park, Weather):")
