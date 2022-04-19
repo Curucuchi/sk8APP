@@ -41,6 +41,7 @@ func begin(answer string) {
 	lName := ""
 	Email := ""
 	uName := ""
+	pWord := ""
 	if strings.ToLower(answer) == "s" {
 		fmt.Println("Name: ")
 		fmt.Scanf("%s", &fName)
@@ -50,15 +51,23 @@ func begin(answer string) {
 		fmt.Scanf("%s", &Email)
 		fmt.Println("Username: ")
 		fmt.Scanf("%s", &uName)
+		fmt.Println("Password: ")
+		fmt.Scanf("%s", &pWord)
 
 		//db.CreateUser(fName, lName, Email, uName) will be replaced with grpc call
 	} else if strings.ToLower(answer) == "l" {
-		fmt.Println("Enter username to login: ")
+		fmt.Println("Enter username & password to login: ")
+		fmt.Println("Username: ")
 		fmt.Scanf("%s", &uName)
+		fmt.Println("Password: ")
+		fmt.Scanf("%s", &pWord)
 		//db.SignIn(uName) will be replaced with grpc call
 	} else if strings.ToLower(answer) == "d" {
-		fmt.Println("Which user do you want to delete? (Type Username you want deleted)")
+		fmt.Println("Which user do you want to delete? (Type Username & Password for the User you want deleted)")
+		fmt.Println("Username: ")
 		fmt.Scanf("%s", &uName)
+		fmt.Println("Password: ")
+		fmt.Scanf("%s", &pWord)
 		//db.DeleteUser(uName) will be replaced with grpc call
 	} else {
 		fmt.Println("Make sure you typed s, l, or d", "\n")
