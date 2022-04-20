@@ -14,7 +14,6 @@ func Run() {
 
 	defer conn.Close()
 
-	//client :=
-	//test
+	//client := userspb.NewUserServiceClient(conn)
 
 }
